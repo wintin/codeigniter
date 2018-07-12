@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 * VMTIEN 
 */
 
-class User extends CI_Controller 
+class User extends MY_Controller 
 {
 	
 	public function __construct()
@@ -19,7 +19,16 @@ class User extends CI_Controller
 		$data = array();
 		$data['users'] = $this->User_model->get_all();
 
-		$this->load->view('user/list_view', $data);
+		// $data['template'] = 'user/list_view';
+
+		// //$this->load->view('user/list_view', $data);
+
+		// $this->load->view('layout/layout_view', $data);
+
+		$this->temp['template'] = 'user/list_view';
+		$this->temp['data'] = $data;
+
+		$this->render();
 		
 
 
@@ -35,9 +44,13 @@ class User extends CI_Controller
 			$this->User_model->insert($post_data);	
 		}
 
+		$data['template'] = 'user/create_view';
+
 		
 
-		$this->load->view('user/create_view');
+		//$this->load->view('user/create_view');
+
+		$this->load->view('layout/layout_view', $data);
 	}
 
 	public function edit($id)

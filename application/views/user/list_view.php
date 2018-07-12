@@ -1,6 +1,5 @@
 <h3>User list</h3>
 
-
 <link rel="stylesheet" href="/assets/plugins/bootstrap/css/bootstrap.css" />
 
 <a class="btn btn-default" href="/user/create">Create</a>

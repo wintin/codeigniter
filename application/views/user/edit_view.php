@@ -38,7 +38,11 @@
 
 			var data = $(this).serialize();
 			
+			//check validate
 
+			//return false;
+
+			//
 			$.post(window.location.href, data, function(result){
 				console.log(result);
 
