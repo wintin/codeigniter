@@ -8,7 +8,11 @@
 </head>
 <body>
 	<!-- Header	 -->
-	<?php $this->load->view('layout/header_view'); ?>
+	<?php 
+	
+		$this->load->view('layout/header_view'); 
+	
+	?>
 	
 
 	<?php 

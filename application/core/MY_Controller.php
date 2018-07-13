@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class MY_Controller extends CI_Controller 
 {
 	protected $temp;
+	
 	public function __construct()
 	{
 		parent::__construct();
@@ -19,6 +20,8 @@ class MY_Controller extends CI_Controller
 
 	public function render()
 	{
+		
+
 		$this->load->view('layout/layout_view', $this->temp);
 		
 	}
